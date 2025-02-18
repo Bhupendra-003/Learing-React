@@ -1,13 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-const About = () => {
+function About() {
     return (
-        <div className="p-4">
-            <h1 className="text-2xl font-bold mb-2 p-4 bg-green-300 rounded-md">About This Tutorial</h1>
-            <p className="mb-2">This tutorial is designed for aspiring web developers who want to learn React.</p>
-            <p>We cover fundamental concepts and provide practical examples to help you grasp the material effectively.</p>
+        <div>
+            <div className='flex justify-center items-center h-screen'>
+                <div className='w-96 h-16 bg-purple-300 rounded-lg flex justify-center items-center'>
+                    <p>You are on the About page</p>
+                </div>
+            </div>
         </div>
-    );
-};
+    )
+}
 
-export default About;
+export default About

@@ -1,26 +1,21 @@
-import React from 'react';
-import { Link, NavLink} from 'react-router-dom';
-import Routing from '../util/Routing';
-
+import React from 'react'
+import { Link } from 'react-router-dom';
 function Nav() {
-    const activePage = (e, color) => {
-        if(e.isActive){
-            return {
-                color: color,
-                borderBottom: `2px solid ${color}`
-            }
-        }
-    }
     return (
-        <>
-            <nav className='flex gap-12 p-8 justify-center items-center '>
-                <NavLink style={e => activePage(e, 'green')} className='text-xl font-bold' to="/"><span>Home</span></NavLink>
-                <NavLink style={e => activePage(e, 'red')} className='text-xl font-bold' to="/user">User </NavLink>
-                <NavLink style={e => activePage(e, 'blue')} className='text-xl font-bold' to="/about">About</NavLink>
+        <div>
+            <nav className='flex justify-between w-full h-16 px-8 items-center border-b-2 border-gray-900'>
+                <div className='flex gap-10'>
+                    <Link to='/'>Home</Link>
+                    <Link to='/about'>About</Link>
+                    <Link to='/user'>User</Link>
+                </div>
+                <div className='flex gap-10'>
+                    <Link to='/login'>Login</Link>
+                    <Link to='/signup'>Signup</Link>
+                </div>
             </nav>
-            <Routing />
-        </>
-    );
+        </div>
+    )
 }
 
-export default Nav;
+export default Nav

@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-const Home = () => {
+function Home() {
     return (
-        <div className="p-4">
-            <h1 className="text-2xl font-bold mb-2 bg-blue-300 rounded-md p-4">Welcome to Our React Tutorial!</h1>
-            <p className="mb-2">This is a beginner-friendly tutorial aimed at helping you understand the basics of React. You'll learn about components, state management, and how to build interactive user interfaces.</p>
-            <p>Get started by exploring the User and About pages.</p>
+        <div className='flex justify-center items-center h-screen'>
+            <div className='w-96 h-16 bg-purple-300 rounded-lg flex justify-center items-center'>
+                <p>You are on the home page</p>
+            </div>
         </div>
-    );
-};
+    )
+}
 
-export default Home;
+export default Home
