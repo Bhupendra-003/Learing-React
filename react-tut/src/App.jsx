@@ -1,40 +1,12 @@
 import React from 'react'
-import axios from 'axios'
-const App = () => {
-    const getProducts = () => {
-        console.log('Function called')
-        const api = 'https://fakestoreapi.com/products'
-        axios
-            .get(api).then(products => {
-                console.log(products)
+import Nav from './components/Nav'
+import Routing from './util/Routing'
 
-            })
-            .catch((err) => console.log(err))
-    }
-
-    const addProducts = () => {
-        console.log('Post function called');
-        const api = 'https://fakestoreapi.com/products'
-        axios
-            .post(api, {
-                title: 'Juhi Chawala',
-                price: 13.5,
-                description: 'lorem ipsum set',
-                image: 'https://i.pravatar.cc',
-                category: 'electronic'
-            })
-            .then(() => {
-                console.log('Post Done')
-            })
-            .catch((err) => {
-                console.log("Got Error")
-            })
-    }
+function App() {
     return (
-
-        <div>
-            {addProducts()}
-            {getProducts()}
+        <div className='bg-[#1F1F1F] w-full h-fit'>
+            <Nav />
+            <Routing />
         </div>
     )
 }
